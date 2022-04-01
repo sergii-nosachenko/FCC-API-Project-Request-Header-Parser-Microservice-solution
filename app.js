@@ -2,8 +2,6 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 
-const parser = require('./requestParser');
-
 const app = express();
 
 const port = process.env.PORT || 5000;
@@ -17,8 +15,6 @@ app.use(cors({ optionsSuccessStatus: 200 })); // some legacy browsers choke on 2
 
 app.use('/public', express.static('public'));
 
-app.use('/api/whoami', parser);
-
 // API ROUTES
 
 // Index route, shows index.html page
@@ -28,7 +24,12 @@ app.get('/', (req, res) => {
 
 // API GET route
 app.get('/api/whoami', (req, res) => {
-  res.json(req.json);
+  const json = {
+    ipaddress: req.ip,
+    language: req.headers['accept-language'],
+    software: req.headers['user-agent']
+  };
+  res.json(json);
 });
 
 // SERVER RUN
