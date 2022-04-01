@@ -1,0 +1,34 @@
+{
+  "name": "fcc-api-project-request-header-parser-microservice-solution",
+  "version": "1.0.0",
+  "description": "FCC API Project: Request Header Parser Microservice solution",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sergii-nosachenko/FCC-API-Project-Request-Header-Parser-Microservice-solution.git"
+  },
+  "keywords": [
+    "freecodecamp",
+    "api",
+    "express",
+    "solution"
+  ],
+  "author": "Sergii Nosachenko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sergii-nosachenko/FCC-API-Project-Request-Header-Parser-Microservice-solution/issues"
+  },
+  "homepage": "https://github.com/sergii-nosachenko/FCC-API-Project-Request-Header-Parser-Microservice-solution#readme",
+  "devDependencies": {
+    "eslint": "^8.12.0",
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3"
+  }
+}
